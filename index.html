@@ -577,41 +577,6 @@
       color: white;
     }
 
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .fade-in-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    .fade-in-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .delay-100 {
-      transition-delay: 100ms;
-    }
-
-    .delay-200 {
-      transition-delay: 200ms;
-    }
-
-    .delay-300 {
-      transition-delay: 300ms;
-    }
 
     /* Selection */
     ::selection {
@@ -709,8 +674,7 @@
 
   <!-- HERO SECTION -->
   <header class="hero container">
-    <div class="max-w-3xl flex flex-col items-center text-center fade-in-up md:mx-auto"
-      style="max-width: 850px; margin: 0 auto;">
+    <div class="max-w-3xl flex flex-col items-center text-centermd:mx-auto" style="max-width: 850px; margin: 0 auto;">
       <h1 class="text-5xl font-heading font-bold leading-tight tracking-tight mb-6">
         I build websites that win clients for your business — <span class="text-gradient">fast.</span>
       </h1>
@@ -732,7 +696,7 @@
 
   <!-- ABOUT SECTION -->
   <section id="about" class="py-section container" style="padding-top: 5rem; padding-bottom: 2rem;">
-    <div class="glass-card fade-in-up flex flex-col items-center gap-8" style="padding: 2.5rem; text-align: center;">
+    <div class="glass-cardflex flex-col items-center gap-8" style="padding: 2.5rem; text-align: center;">
       <div class="flex-1">
         <h2 class="text-3xl font-heading font-bold mb-4">About Me</h2>
         <p class="text-secondary text-lg mb-4">
@@ -752,7 +716,7 @@
 
   <!-- EXPERTISE SECTION -->
   <section id="expertise" class="py-section container">
-    <div class="text-center mb-16 fade-in-up">
+    <div class="text-center mb-16">
       <h2 class="text-3xl font-heading font-bold mb-4">Areas of Expertise</h2>
       <p class="text-secondary text-lg max-w-2xl mx-auto">Specialized skills engineered to scale your digital presence.
       </p>
@@ -760,22 +724,22 @@
 
     <div class="grid grid-cols-2 gap-8">
 
-      <div class="glass-card fade-in-up">
+      <div class="glass-card">
         <h3 class="text-xl font-heading font-bold mb-3 text-gradient inline-block">Frontend Architecture</h3>
         <p class="text-secondary">React, Vue, Next.js · Responsive & mobile-first.</p>
       </div>
 
-      <div class="glass-card fade-in-up delay-100">
+      <div class="glass-card">
         <h3 class="text-xl font-heading font-bold mb-3 text-gradient inline-block">Backend Engineering</h3>
         <p class="text-secondary">Node.js, Python, APIs & microservices for robust logic.</p>
       </div>
 
-      <div class="glass-card fade-in-up delay-200">
+      <div class="glass-card">
         <h3 class="text-xl font-heading font-bold mb-3 text-gradient inline-block">Social Media & Content</h3>
         <p class="text-secondary">Brand presence, conversion-focused content strategy tailored for growth.</p>
       </div>
 
-      <div class="glass-card fade-in-up delay-300">
+      <div class="glass-card">
         <h3 class="text-xl font-heading font-bold mb-3 text-gradient inline-block">AI-Accelerated Dev</h3>
         <p class="text-secondary">Web apps built faster using advanced LLM tools and integrations.</p>
       </div>
@@ -785,7 +749,7 @@
 
   <!-- PROJECTS SECTION -->
   <section id="projects" class="py-section container">
-    <div class="mb-16 fade-in-up">
+    <div class="mb-16">
       <h2 class="text-3xl font-heading font-bold mb-4">Featured Work</h2>
       <p class="text-secondary text-lg">High-conversion landing pages and web apps.</p>
     </div>
@@ -793,7 +757,7 @@
     <div class="grid grid-cols-1 gap-20">
 
       <!-- Project 1 -->
-      <div class="glass-card flex flex-col fade-in-up relative overflow-hidden group">
+      <div class="glass-card flex flex-colrelative overflow-hidden group">
         <div class="relative z-10">
           <div class="project-img-wrapper"><img
               src="https://275bfa783e62eef2c5ea.cdn6.editmysite.com/uploads/b/c44d5730-4043-11ea-8d0c-2d89b0d3d4bb/logo.png?width=2000&optimize=medium"
@@ -815,7 +779,7 @@
       </div>
 
       <!-- Project 2 -->
-      <div class="glass-card flex flex-col fade-in-up relative overflow-hidden group">
+      <div class="glass-card flex flex-colrelative overflow-hidden group">
         <div class="relative z-10">
           <div class="project-img-wrapper"><img
               src="https://www.vancouvernewcondos.com/wp-content/uploads/2018/02/university-heights.jpg"
@@ -836,7 +800,7 @@
       </div>
 
       <!-- Project 3 -->
-      <div class="glass-card flex flex-col fade-in-up relative overflow-hidden group">
+      <div class="glass-card flex flex-colrelative overflow-hidden group">
         <div class="relative z-10">
           <div class="project-img-wrapper"><img
               src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
@@ -862,14 +826,14 @@
 
   <!-- PAYMENT SECTION -->
   <section id="payment" class="py-section container">
-    <div class="mb-16 fade-in-up text-center">
+    <div class="mb-16text-center">
       <h2 class="text-3xl font-heading font-bold mb-4">Transparent Pricing</h2>
       <p class="text-secondary text-lg max-w-2xl mx-auto">Straightforward packages with no hidden fees.</p>
     </div>
 
     <div class="grid grid-cols-2 gap-8">
       <!-- Basic Package -->
-      <div class="glass-card fade-in-up flex flex-col">
+      <div class="glass-cardflex flex-col">
         <h3 class="text-2xl font-heading font-bold mb-2">Basic</h3>
         <p class="text-secondary mb-2">Essential online presence for individuals or small startups.</p>
         <div class="mb-2">
@@ -886,8 +850,7 @@
       </div>
 
       <!-- Standard Package -->
-      <div class="glass-card fade-in-up delay-100 flex flex-col"
-        style="border-color: var(--color-primary); position: relative;">
+      <div class="glass-card flex flex-col" style="border-color: var(--color-primary); position: relative;">
         <div class="tag absolute" style="top: -12px; right: 2rem; background: var(--color-primary); color: white;">Most
           Popular</div>
         <h3 class="text-2xl font-heading font-bold mb-2">Standard</h3>
@@ -911,7 +874,7 @@
 
   <!-- INCLUDED SERVICES -->
   <section id="included" class="py-section container" style="padding-top: 0;">
-    <div class="glass-card fade-in-up mt-8">
+    <div class="glass-cardmt-8">
       <h3 class="text-2xl font-heading font-bold mb-8 text-center">What's Included in Every Package</h3>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <div class="text-center">
@@ -970,47 +933,46 @@
 
   <!-- FAQ SECTION -->
   <section id="faq" class="py-section container" style="padding-top: 0;">
-    <div class="mb-12 fade-in-up text-center">
+    <div class="mb-12text-center">
       <h2 class="text-3xl font-heading font-bold mb-4">Frequently Asked Questions</h2>
       <p class="text-secondary text-lg">Everything you need to know before we get started.</p>
     </div>
 
     <div class="max-w-3xl flex flex-col gap-6" style="max-width: 800px; margin: 0 auto;">
       <!-- FAQ 1 -->
-      <div class="glass-card fade-in-up" style="padding: 2rem;">
+      <div class="glass-card" style="padding: 2rem;">
         <h4 class="text-xl font-heading font-bold mb-3 text-primary">Are there any hidden fees or recurring costs?</h4>
         <p class="text-secondary">No hidden fees. The prices listed are one-time costs for the development of your
           project. Hosting and domain names are standard ongoing expenses that you'll manage via your preferred
           provider, though I will help you set them up.</p>
       </div>
       <!-- FAQ 2 -->
-      <div class="glass-card fade-in-up delay-100" style="padding: 2rem;">
+      <div class="glass-card" style="padding: 2rem;">
         <h4 class="text-xl font-heading font-bold mb-3 text-primary">Do you provide ongoing maintenance?</h4>
         <p class="text-secondary">Every package comes with 1 month of free support for bug fixes and minor adjustments.
           For long-term updates, we can discuss a small monthly retainer depending on your needs.</p>
       </div>
       <!-- FAQ 3 -->
-      <div class="glass-card fade-in-up delay-200" style="padding: 2rem;">
+      <div class="glass-card" style="padding: 2rem;">
         <h4 class="text-xl font-heading font-bold mb-3 text-primary">What if I need additional features later?</h4>
         <p class="text-secondary">The code I write is highly scalable. If you need new pages or advanced features later
           on, I can easily add them at an hourly rate or a fixed project fee.</p>
       </div>
       <!-- FAQ 4 -->
-      <div class="glass-card fade-in-up delay-300" style="padding: 2rem;">
+      <div class="glass-card" style="padding: 2rem;">
         <h4 class="text-xl font-heading font-bold mb-3 text-primary">How do we communicate during the project?</h4>
         <p class="text-secondary">Communication is key. We will primarily communicate through email or WhatsApp, and I
           will provide regular progress updates to ensure we are aligned at every step.</p>
       </div>
       <!-- FAQ 5 -->
-      <div class="glass-card fade-in-up delay-300" style="padding: 2rem;">
+      <div class="glass-card" style="padding: 2rem;">
         <h4 class="text-xl font-heading font-bold mb-3 text-primary">Will my website be mobile-friendly?</h4>
         <p class="text-secondary">Absolutely! Every website I build is 100% responsive, meaning it will look and
           function beautifully on smartphones, tablets, and desktop computers alike.</p>
       </div>
 
       <!-- Ask Your Question CTA -->
-      <div class="glass-card fade-in-up delay-300 text-center mt-8"
-        style="padding: 2.5rem; border-color: rgba(99, 102, 241, 0.3);">
+      <div class="glass-card text-center mt-8" style="padding: 2.5rem; border-color: rgba(99, 102, 241, 0.3);">
         <h4 class="text-2xl font-heading font-bold mb-3 text-white">Still have questions?</h4>
         <p class="text-secondary mb-6">I'm here to help. Reach out and I'll get back to you directly.</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGRCpJbgaekCGtIQqYPzv8SNrbwiUVqhcul8cAxNAPIvn2dA/viewform?usp=header"
@@ -1021,26 +983,26 @@
 
   <!-- HOW I WORK SECTION -->
   <section id="workflow" class="py-section container">
-    <div class="mb-16 fade-in-up">
+    <div class="mb-16">
       <h2 class="text-3xl font-heading font-bold mb-4">How I Work</h2>
       <p class="text-secondary text-lg">A simple, transparent process to get your product live.</p>
     </div>
 
     <div class="flex workflow-flex gap-12 mb-12">
 
-      <div class="step-card fade-in-up">
+      <div class="step-card">
         <span class="step-number">STEP 01</span>
         <h3 class="text-2xl font-heading font-bold mb-3">Discovery Call</h3>
         <p class="text-secondary font-medium">We talk about your goals, timeline, and budget. No jargon.</p>
       </div>
 
-      <div class="step-card fade-in-up delay-100">
+      <div class="step-card">
         <span class="step-number">STEP 02</span>
         <h3 class="text-2xl font-heading font-bold mb-3">Proposal & Plan</h3>
         <p class="text-secondary font-medium">You get a clear scope, timeline, and fixed price upfront.</p>
       </div>
 
-      <div class="step-card fade-in-up delay-200">
+      <div class="step-card">
         <span class="step-number">STEP 03</span>
         <h3 class="text-2xl font-heading font-bold mb-3">Build & Deliver</h3>
         <p class="text-secondary font-medium">I build fast, communicate daily, and launch on time.</p>
@@ -1048,7 +1010,7 @@
 
     </div>
 
-    <div class="fade-in-up delay-300">
+    <div class="">
       <p class="font-medium text-gradient bg-primary-light inline-block"
         style="background-color: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.15); border-radius: 999px; padding: 0.75rem 2rem;">
         Most projects complete in 2–6 weeks.
