@@ -372,47 +372,22 @@
       font-size: 0.875rem;
     }
 
-    /* Glassmorphism Cards with Spotlight */
+    /* Glassmorphism Cards */
     .glass-card {
-      position: relative;
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+      background: var(--color-surface);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 24px;
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
       padding: 2.5rem;
-      transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
-      overflow: hidden;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .glass-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.06), transparent 40%);
-      z-index: 0;
-      opacity: 0;
-      transition: opacity 0.5s;
-      pointer-events: none;
-    }
-
-    .glass-card:hover::before {
-      opacity: 1;
-    }
-
-    .glass-card>* {
-      position: relative;
-      z-index: 1;
+      transition: all var(--transition-smooth);
     }
 
     .glass-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(165, 180, 252, 0.2);
-      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4), 0 0 20px rgba(99, 102, 241, 0.1);
+      transform: translateY(-8px);
+      border-color: rgba(165, 180, 252, 0.15);
+      background: var(--color-surface-hover);
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
     }
 
     /* Project Images */
@@ -424,24 +399,6 @@
       width: 100%;
       margin-bottom: 2rem;
       background: rgba(0, 0, 0, 0.5);
-      position: relative;
-    }
-
-    .project-img-wrapper::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(to top, rgba(99, 102, 241, 0.4) 0%, transparent 60%);
-      opacity: 0;
-      transition: opacity var(--transition-smooth);
-      pointer-events: none;
-    }
-
-    .glass-card:hover .project-img-wrapper::after {
-      opacity: 1;
     }
 
     .project-img {
@@ -801,24 +758,24 @@
       </p>
     </div>
 
-    <div class="bento-grid">
+    <div class="grid grid-cols-2 gap-8">
 
-      <div class="glass-card fade-in-up bento-col-span-8 flex flex-col justify-center">
+      <div class="glass-card fade-in-up">
         <h3 class="text-xl font-heading font-bold mb-3 text-gradient inline-block">Frontend Architecture</h3>
         <p class="text-secondary">React, Vue, Next.js · Responsive & mobile-first.</p>
       </div>
 
-      <div class="glass-card fade-in-up delay-100 bento-col-span-4 flex flex-col justify-center">
+      <div class="glass-card fade-in-up delay-100">
         <h3 class="text-xl font-heading font-bold mb-3 text-gradient inline-block">Backend Engineering</h3>
         <p class="text-secondary">Node.js, Python, APIs & microservices for robust logic.</p>
       </div>
 
-      <div class="glass-card fade-in-up delay-200 bento-col-span-4 flex flex-col justify-center">
+      <div class="glass-card fade-in-up delay-200">
         <h3 class="text-xl font-heading font-bold mb-3 text-gradient inline-block">Social Media & Content</h3>
         <p class="text-secondary">Brand presence, conversion-focused content strategy tailored for growth.</p>
       </div>
 
-      <div class="glass-card fade-in-up delay-300 bento-col-span-8 flex flex-col justify-center">
+      <div class="glass-card fade-in-up delay-300">
         <h3 class="text-xl font-heading font-bold mb-3 text-gradient inline-block">AI-Accelerated Dev</h3>
         <p class="text-secondary">Web apps built faster using advanced LLM tools and integrations.</p>
       </div>
@@ -1173,36 +1130,7 @@
         });
       });
 
-      /* --- Scroll Animations --- */
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-      };
-
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll('.fade-in-up').forEach(el => {
-        observer.observe(el);
-      });
-
-      /* --- Spotlight Hover Effect --- */
-      document.querySelectorAll('.glass-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-          const rect = card.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-          card.style.setProperty('--mouse-x', `${x}px`);
-          card.style.setProperty('--mouse-y', `${y}px`);
-        });
-      });
+      /* --- Animations removed --- */
 
     });
   </script>
