@@ -8,10 +8,11 @@
   <meta name="description"
     content="I build websites that win clients for your business — fast. Landing pages, web apps, and AI-powered tools delivered in weeks." />
 
-  <!-- Google Fonts: Inter (body) and Syne (headings) -->
+  <!-- Google Fonts: Inter (body) and Outfit (headings) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap"
     rel="stylesheet">
 
   <style>
@@ -35,7 +36,7 @@
 
       /* Typography */
       --font-body: 'Inter', sans-serif;
-      --font-heading: 'Syne', sans-serif;
+      --font-heading: 'Outfit', sans-serif;
 
       /* Spacing */
       --spacing-base: 1rem;
@@ -546,29 +547,7 @@
       color: white;
     }
 
-    /* Animations */
-    .fade-in-up {
-      opacity: 0;
-      transform: translateY(40px) scale(0.98);
-      transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), transform 1s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    .fade-in-up.visible {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-
-    .delay-100 {
-      transition-delay: 100ms;
-    }
-
-    .delay-200 {
-      transition-delay: 200ms;
-    }
-
-    .delay-300 {
-      transition-delay: 300ms;
-    }
+    /* Animations removed */
 
     /* ---------------------------------
        RESPONSIVE DESIGN (Breakpoints)
@@ -1081,24 +1060,7 @@
         });
       });
 
-      /* --- Intersection Observer for Animations --- */
-      const animatedElements = document.querySelectorAll('.fade-in-up');
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px 0px -50px 0px',
-        threshold: 0.1
-      };
-
-      const fadeObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-
-      animatedElements.forEach(el => fadeObserver.observe(el));
+      /* --- Animations removed --- */
 
     });
   </script>
