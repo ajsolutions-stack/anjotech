@@ -40,7 +40,7 @@
 
       /* Spacing */
       --spacing-base: 1rem;
-      --section-py: 4rem;
+      --section-py: 8rem;
 
       /* Transitions */
       --transition-fast: 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -578,11 +578,8 @@
     }
 
 
-    /* Selection */
-    ::selection {
-      background: rgba(99, 102, 241, 0.3);
-      color: white;
-    }
+    /* Animations removed */
+
 
     /* ---------------------------------
        RESPONSIVE DESIGN (Breakpoints)
@@ -595,7 +592,7 @@
 
     @media (max-width: 768px) {
       :root {
-        --section-py: 2.5rem;
+        --section-py: 5rem;
       }
 
       .grid-cols-2,
@@ -674,7 +671,8 @@
 
   <!-- HERO SECTION -->
   <header class="hero container">
-    <div class="max-w-3xl flex flex-col items-center text-centermd:mx-auto" style="max-width: 850px; margin: 0 auto;">
+    <div class="max-w-3xl flex flex-col items-center text-center fade-in-up md:mx-auto"
+      style="max-width: 850px; margin: 0 auto;">
       <h1 class="text-5xl font-heading font-bold leading-tight tracking-tight mb-6">
         I build websites that win clients for your business — <span class="text-gradient">fast.</span>
       </h1>
@@ -716,7 +714,7 @@
 
   <!-- EXPERTISE SECTION -->
   <section id="expertise" class="py-section container">
-    <div class="text-center mb-16">
+    <div class="text-center mb-16 fade-in-up">
       <h2 class="text-3xl font-heading font-bold mb-4">Areas of Expertise</h2>
       <p class="text-secondary text-lg max-w-2xl mx-auto">Specialized skills engineered to scale your digital presence.
       </p>
